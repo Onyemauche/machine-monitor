@@ -4,35 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Machine Monitor</title>
 </head>
 
 <body id="top">
 
+    <!-- Page header -->
     <header>
         <h1>Machine Monitor</h1>
-        <p>A training dashboard for monitoring production equipment.</p>
-
-        <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#machines">Machines</a></li>
-                <li><a href="#add-machine">Add Machine</a></li>
-                <li>
-                    <a
-                        href="https://github.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        GitHub
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <p>A dashboard for monitoring production equipment.</p>
     </header>
 
+    <!-- Navigation -->
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#machines">Machines</a></li>
+            <li><a href="#add-machine">Add Machine</a></li>
+            <li>
+                <a
+                    href="https://github.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main page content -->
     <main>
 
+        <!-- Production overview -->
         <section id="overview" aria-labelledby="overview-heading">
             <h2 id="overview-heading">Production Overview</h2>
 
@@ -46,20 +51,27 @@
             </ul>
         </section>
 
+        <!-- Machine status table -->
         <section id="machines" aria-labelledby="machines-heading">
             <h2 id="machines-heading">Machine Status</h2>
 
+            <!-- Machine search form -->
             <form action="#machines" method="get" role="search">
-                <label for="machine-search">Search by machine name</label>
+                <label for="machine-search">
+                    Search by machine name
+                </label>
+
                 <input
                     type="search"
                     id="machine-search"
                     name="q"
                     placeholder="e.g. Filler 01"
                 >
+
                 <button type="submit">Search</button>
             </form>
 
+            <!-- Machine table -->
             <table>
                 <caption>Current sample machine status</caption>
 
@@ -99,17 +111,22 @@
             </table>
         </section>
 
-        <section id="add-machine" aria-labelledby="add-machine-heading">
+        <!-- Machine registration form -->
+        <section
+            id="add-machine"
+            aria-labelledby="add-machine-heading"
+        >
             <h2 id="add-machine-heading">Register a Machine</h2>
 
             <p>
-                This is a practice form. It does not save a machine record yet.
+                Use this form to practise entering machine information.
             </p>
 
             <form action="#add-machine" method="get">
 
                 <p>
                     <label for="machine-name">Machine name</label>
+
                     <input
                         type="text"
                         id="machine-name"
@@ -122,10 +139,16 @@
 
                 <p>
                     <label for="machine-type">Machine type</label>
-                    <select id="machine-type" name="machine_type" required>
+
+                    <select
+                        id="machine-type"
+                        name="machine_type"
+                        required
+                    >
                         <option value="" selected disabled>
-                            Choose a type
+                            Choose a machine type
                         </option>
+
                         <option value="conveyor">Conveyor</option>
                         <option value="filler">Filler</option>
                         <option value="motor">Motor</option>
@@ -136,10 +159,16 @@
 
                 <p>
                     <label for="new-status">Current status</label>
-                    <select id="new-status" name="status" required>
+
+                    <select
+                        id="new-status"
+                        name="status"
+                        required
+                    >
                         <option value="" selected disabled>
                             Choose a status
                         </option>
+
                         <option value="running">Running</option>
                         <option value="stopped">Stopped</option>
                         <option value="maintenance">Maintenance</option>
@@ -147,7 +176,10 @@
                 </p>
 
                 <p>
-                    <label for="maintenance-date">Maintenance date</label>
+                    <label for="maintenance-date">
+                        Maintenance date
+                    </label>
+
                     <input
                         type="date"
                         id="maintenance-date"
@@ -155,24 +187,37 @@
                     >
                 </p>
 
-                <button type="submit">Submit Machine Details</button>
+                <button type="submit">
+                    Submit Machine Details
+                </button>
 
             </form>
         </section>
 
+        <!-- Additional information -->
         <aside aria-labelledby="project-note-heading">
             <h2 id="project-note-heading">Project Note</h2>
+
             <p>
-                All machine records and status values on this page are simulated.
-                No real equipment is connected.
+                This is a learning project. All machine information is
+                simulated, and no real equipment is connected.
+            </p>
+
+            <p>
+                The dashboard does not yet receive live data or save
+                machine records.
             </p>
         </aside>
 
     </main>
 
+    <!-- Page footer -->
     <footer>
-        <p>Machine Monitor — Full-Stack Development Course</p>
-        <p><a href="#top">Back to top</a></p>
+        <p>Machine Monitor — Full-Stack Web Development Course</p>
+
+        <p>
+            <a href="#top">Back to top</a>
+        </p>
     </footer>
 
 </body>
